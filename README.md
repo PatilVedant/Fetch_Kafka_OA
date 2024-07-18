@@ -15,8 +15,11 @@ This assignment sets up a Kafka-based data pipeline to process real-time streami
 ## Project Structure
 
 ├── consumer_producer.py # Python script for consuming and producing Kafka messages
+
 ├── docker-compose.yml # Docker Compose file for setting up Kafka and related services
+
 ├── Version Check # To check if Kafka is installed or not on your local machine
+
 ├── README.md # This readme file
 
 
