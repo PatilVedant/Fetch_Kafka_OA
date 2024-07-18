@@ -9,6 +9,7 @@ This assignment sets up a Kafka-based data pipeline to process real-time streami
 ## Prerequisites
 
 - Docker and Docker Compose installed on your local machine.
+- Apache kafka installed on your machine.
 - Python 3.8+ installed on your local machine.
 - Git installed on your local machine.
 
@@ -30,8 +31,40 @@ This assignment sets up a Kafka-based data pipeline to process real-time streami
 ```bash
 git clone https://github.com/PatilVedant/Fetch_Kafka_OA.git
 cd <repo-directory>
+```
 
 ### Step 2: Start Docker Containers
 Ensure Docker is installed and running. Use the following command to start the Kafka and Zookeeper services:
+
+```bash
+docker-compose up -d
+```
+
+### Step 3: Run the Kafka Consumer and Producer Script
+```bash
+python consumer_producer.py
+```
+
+### Configuration
+The script and Docker Compose file have some configurable options:
+Docker Configuration
+The docker-compose.yml file includes the setup for Kafka, Zookeeper, and a data generator. You can customize the ports and other settings as needed.
+
+Sample Kafka Message
+A sample message produced to the user-login topic looks like this:
+
+```json
+{
+  "user_id": "424cdd21-063a-43a7-b91b-7ca1a833afae",
+  "app_version": "2.3.0",
+  "device_type": "android",
+  "ip": "199.172.111.135",
+  "locale": "RU",
+  "device_id": "593-47-5928",
+  "timestamp": "1694479551"
+}
+```
+
+
 
 
